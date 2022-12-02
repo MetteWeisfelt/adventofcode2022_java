@@ -1,8 +1,8 @@
-import days.DayOne;
+import days.*;
 
 public class Start {
     public static void main(String[] args){
-        DayOne.runChallenge1();
-        DayOne.runChallenge2();
+        DayTwo.runChallenge1();
+        DayTwo.runChallenge2();
     }
 }
