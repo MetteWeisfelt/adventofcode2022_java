@@ -38,7 +38,7 @@ public class DayThree {
                 setList.clear();
             }
 
-            System.out.println(">>> answer day two challenge 1: " + priorities);
+            System.out.println(">>> answer day three challenge 1: " + priorities);
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -48,5 +48,22 @@ public class DayThree {
     public static void runChallenge2() {
         System.out.println(">>> day 3 challenge 2 is starting now...");
 
+        File file;
+        BufferedReader br;
+        String line;
+
+        try {
+            file = new File("C:\\Users\\mcwei\\Documents\\Personal\\Projects\\adventofcode2022\\inputs\\inputdaythree.txt");
+            br = new BufferedReader(new FileReader(file));
+
+            while((line = br.readLine()) != null){
+                
+            }
+
+            System.out.println(">>> answer day three challenge 2: " );
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
