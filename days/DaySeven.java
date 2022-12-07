@@ -36,7 +36,6 @@ public class DaySeven {
                 return child;
             }
         }
-        System.out.println("heh");
         return null;
     }
 
@@ -89,7 +88,6 @@ public class DaySeven {
                 if(line.charAt(0) == '$') {
                     String[] cdSplit = line.substring(2).split("\\s+");
 
-                    // check if name or moving up on tree
                     if(cdSplit[0].equals("cd")){
                         if(!cdSplit[1].equals("..")) {
                             if(currentDaySeven == null){
@@ -99,7 +97,6 @@ public class DaySeven {
                                 currentDaySeven = findNode(currentDaySeven, cdSplit[1]);
                             }
                         } else {
-                            // moving up directory
                             currentDaySeven = currentDaySeven.parent;
                         }
                     }
@@ -116,7 +113,6 @@ public class DaySeven {
             throw new RuntimeException(e);
         }
 
-        // postorder tree traversal
         traverse(root);
         System.out.println(">>> answer day 7 challenge 1: " + totalSum);
         totalSum = 0;
@@ -137,7 +133,6 @@ public class DaySeven {
                 if(line.charAt(0) == '$') {
                     String[] cdSplit = line.substring(2).split("\\s+");
 
-                    // check if name or moving up on tree
                     if(cdSplit[0].equals("cd")){
                         if(!cdSplit[1].equals("..")) {
                             if(currentDaySeven == null){
@@ -147,7 +142,6 @@ public class DaySeven {
                                 currentDaySeven = findNode(currentDaySeven, cdSplit[1]);
                             }
                         } else {
-                            // moving up directory
                             currentDaySeven = currentDaySeven.parent;
                         }
                     }
