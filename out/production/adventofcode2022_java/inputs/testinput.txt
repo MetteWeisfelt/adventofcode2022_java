@@ -1,4 +1,31 @@
-VdzVHmNpdVmBBCpmQLTNfTtMhMJnhFhTTf
-FgqsZbqDDFqRrhhJnsnLMTfhJG
-bRRRPrRRwSwbDqgjvDZbRbQzpzmQVWCzzBdvQBFCzlWV
-GcDdRdvhRssRhGDdShCRtqWjlQzqWgqzNfNjfQWWjt
+$ cd /
+$ ls
+dir cmjgvh
+dir czrzl
+dir fcbt
+dir hdh
+259661 hjsbd.mzp
+dir jgrdd
+dir lqblqtng
+dir pgvmpmn
+dir pqqcvcm
+dir zglbptq
+$ cd cmjgvh
+$ ls
+dir hdh
+1345 hdh.sjv
+dir hgrpfmt
+282147 mjtq.ffd
+42343 rvmzv.rtb
+dir sjgvbd
+31468 wgtjmb.thf
+$ cd hdh
+$ ls
+53963 htofe.ger
+dir a
+267125 htplc.gdw
+$ cd ..
+$ cd hgrpfmt
+$ ls
+39132 lndwz
+280595 rffmsvdw
