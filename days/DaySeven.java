@@ -58,7 +58,6 @@ public class DaySeven {
         }
     }
 
-    // need to free 24.825.975 => so (5.174.025)
     public static void traverse2(DaySeven child){
         if(child == null){
             return;
@@ -74,10 +73,6 @@ public class DaySeven {
                 sizes.add(child.parent.size);
             }
         }
-    }
-
-    public static void buildTree(){
-
     }
 
     public static void runChallenge1() {
@@ -124,15 +119,53 @@ public class DaySeven {
         // postorder tree traversal
         traverse(root);
         System.out.println(">>> answer day 7 challenge 1: " + totalSum);
-        System.out.println(">>> day 7 challenge 2 is starting now...");
         totalSum = 0;
+    }
+
+    public static void runChallenge2() {
+        System.out.println(">>> day 7 challenge 2 is starting now...");
+
+        String line;
+        DaySeven currentDaySeven = null;
+        DaySeven root = null;
+
+        try {
+            File file = new File("C:\\Users\\mcwei\\Documents\\Personal\\Projects\\adventofcode2022\\inputs\\inputdayseven.txt");
+            BufferedReader br = new BufferedReader(new FileReader(file));
+
+            while((line = br.readLine()) != null){
+                if(line.charAt(0) == '$') {
+                    String[] cdSplit = line.substring(2).split("\\s+");
+
+                    // check if name or moving up on tree
+                    if(cdSplit[0].equals("cd")){
+                        if(!cdSplit[1].equals("..")) {
+                            if(currentDaySeven == null){
+                                root = new DaySeven("/", 0);
+                                currentDaySeven = root;
+                            } else {
+                                currentDaySeven = findNode(currentDaySeven, cdSplit[1]);
+                            }
+                        } else {
+                            // moving up directory
+                            currentDaySeven = currentDaySeven.parent;
+                        }
+                    }
+                } else {
+                    String[] fileSplit = line.split("\\s+");
+                    if(fileSplit[0].equals("dir")){
+                        currentDaySeven.addChild(new DaySeven(fileSplit[1], 0));
+                    } else {
+                        currentDaySeven.size += Integer.parseInt(fileSplit[0]);
+                    }
+                }
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         traverse2(root);
         Collections.sort(sizes);
         System.out.println(">>> answer day 7 challenge 2: " + sizes.get(0));
-    }
-
-    public static void runChallenge2() {
-
     }
 }
